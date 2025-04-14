@@ -1,0 +1,530 @@
+/* header */
+
+  
+  /* Logo container styling */
+  .logo {
+
+    display: inline-block;
+    margin-left: -50px;
+    border-radius: 10px;
+    background-color: #20acb8;
+    color: white;
+    font-size: 10px;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Special styling for the name */
+  .doctor-name {
+    font-size: 40px;
+    color: #fff;
+    font-weight: bold;
+  }
+  
+  /* Tagline or title styling */
+  .tagline {
+    font-size: 10px;
+    color: #f0f0f0;
+    font-style: italic;
+  }
+  
+
+  
+  footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+  }
+  
+  footer p {
+    font-size: 1rem;
+  }
+
+  /* appointment css */
+
+
+
+
+.container {
+    width: 2000px;
+    margin: 0 auto;
+}
+
+h2 {
+    text-align: center;
+    font-size: 4    rem;
+    margin-bottom: 20px;
+}
+
+.appointment-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.appointment-form label {
+    font-size: 15px;
+    margin-bottom: 5px;
+}
+
+.appointment-form input {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1.5rem;
+}
+
+.appointment-form select {
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1.5rem;
+  width: 80%;
+}
+
+.appointment-form button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px;
+    font-size: 1.5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/* login css */
+body .aa{
+width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	font-family: 'Jost', sans-serif;
+	background: linear-gradient(to bottom, #0f0c29, #302b63, #24243e);
+}
+.main{
+	width: 350px;
+	height: 500px;
+	background: red;
+	overflow: hidden;
+	background: url("https://doc-08-2c-docs.googleusercontent.com/docs/securesc/68c90smiglihng9534mvqmq1946dmis5/fo0picsp1nhiucmc0l25s29respgpr4j/1631524275000/03522360960922298374/03522360960922298374/1Sx0jhdpEpnNIydS4rnN4kHSJtU1EyWka?e=view&authuser=0&nonce=gcrocepgbb17m&user=03522360960922298374&hash=tfhgbs86ka6divo3llbvp93mg4csvb38") no-repeat center/ cover;
+	border-radius: 10px;
+	box-shadow: 5px 20px 50px #000;
+}
+#chk{
+	display: none;
+}
+.login{
+	position: relative;
+	width:100%;
+	height: 100%;
+}
+.labelP {
+	color: #fff;
+	font-size: 2.3em;
+	justify-content: center;
+	display: flex;
+	margin: 50px;
+	font-weight: bold;
+	cursor: pointer;
+	transition: .5s ease-in-out;
+}
+.inputD{
+	width: 60%;
+	height: 10px;
+	background: #e0dede;
+	justify-content: center;
+	display: flex;
+	margin: 5px auto;
+	padding: 12px;
+	border: none;
+	outline: none;
+	border-radius: 5px;
+}
+#button{
+	width: 60%;
+	height: 40px;
+	margin: 10px auto;
+	justify-content: center;
+	display: block;
+	color: #fff;
+	background: #20acb8;
+	font-size: 1em;
+	font-weight: bold;
+	margin-top: 30px;
+	outline: none;
+	border: none;
+	border-radius: 5px;
+	transition: .2s ease-in;
+	cursor: pointer;
+}
+button:hover{
+	background: #20acb8;
+}
+.signup{
+	height: 460px;
+	background: #eee;
+	border-radius: 60% / 10%;
+	transform: translateY(-180px);
+	transition: .8s ease-in-ut;
+}
+.signup label{
+	color: #573b8a;
+	transform: scale(.6);
+}
+
+#chk:checked ~ .signup{
+	transform: translateY(-500px);
+}
+#chk:checked ~ .signup label{
+	transform: scale(1);	
+}
+#chk:checked ~ .login label{
+	transform: scale(.6);
+}
+
+
+/* liste appointment */
+.hero {
+    background: SlateGrey;
+    color: white;
+    padding:50px;
+    text-align:center;
+  }
+  .category-button {
+    background: SlateGrey;
+    padding:20px;
+    color:white;
+    display:inline-block;
+    width:410px;  
+    text-align:center;
+  }
+  .category-button:hover {
+    cursor: pointer;
+  }
+  .active {
+    background: #20acb8;
+  }
+
+  
+
+  /* table 1 */
+  table { 
+    border-collapse: collapse; 
+    margin:50px auto;
+    width: 80%;
+    }
+  
+  /* Zebra striping */
+  tr:hover { 
+    background: #d1d1d1; 
+    }
+  
+  th { 
+    background: #3498db; 
+    color: white; 
+    font-weight: bold; 
+    }
+  
+  td, th { 
+    padding: 10px; 
+    border: 1px solid #ccc; 
+    text-align: center; 
+    font-size: 18px;
+    }
+  
+  /* 
+  Max width before this PARTICULAR table gets nasty
+  This query will take effect for any screen smaller than 760px
+  and also iPads specifically.
+  */
+  @media 
+  only screen and (max-width: 760px),
+  (min-device-width: 768px) and (max-device-width: 1024px)  {
+  
+    table { 
+        width: 100%; 
+    }
+  
+    /* Force table to not be like tables anymore */
+    table, thead, tbody, th, td, tr { 
+      display: block; 
+    }
+    
+    /* Hide table headers (but not display: none;, for accessibility) */
+    thead tr { 
+      position: absolute;
+      top: -9999px;
+      left: -9999px;
+    }
+    
+    tr { border: 1px solid #ccc; }
+    
+    td { 
+      /* Behave  like a "row" */
+      border: none;
+      border-bottom: 1px solid #eee; 
+      position: relative;
+      padding-left: 50%; 
+    }
+  
+    
+
+    tr:hover {
+      background: #998282;
+    }
+  
+  }
+
+  /* table2 */
+  @import 'https://fonts.googleapis.com/css?family=Open+Sans:600,700';
+
+* {font-family: 'Open Sans', sans-serif;}
+
+.rwd-table {
+  margin: auto;
+  min-width: 300px;
+  max-width: 100%;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.rwd-table tr:first-child {
+  border-top: none;
+  background: #428bca;
+  color: #fff;
+}
+
+.rwd-table tr {
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  background-color: #f5f9fc;
+}
+
+.rwd-table tr:nth-child(odd):not(:first-child) {
+  background-color: #ebf3f9;
+}
+
+.rwd-table th {
+  display: none;
+}
+
+.rwd-table td {
+  display: block;
+}
+
+.rwd-table td:first-child {
+  margin-top: .5em;
+}
+
+.rwd-table td:last-child {
+  margin-bottom: .5em;
+}
+
+.rwd-table td:before {
+  content: attr(data-th) ": ";
+  font-weight: bold;
+  width: 120px;
+  display: inline-block;
+  color: #000;
+}
+
+.rwd-table th,
+.rwd-table td {
+  text-align: center;
+}
+
+.rwd-table {
+  color: #333;
+  border-radius: .4em;
+  overflow: hidden;
+}
+
+.rwd-table tr {
+  border-color: #bfbfbf;
+}
+
+.rwd-table th,
+.rwd-table td {
+  padding: .5em 1em;
+  
+}
+@media screen and (max-width: 601px) {
+  .rwd-table tr:nth-child(2) {
+    border-top: none;
+  }
+}
+@media screen and (min-width: 900px) {
+  .rwd-table tr:hover:not(:first-child) {
+    background-color: #d8e7f3;
+  }
+  .rwd-table td:before {
+    display: none;
+  }
+  .rwd-table th,
+  .rwd-table td {
+    display: table-cell;
+    padding: .25em .5em;
+    width: 5%;
+  }
+  #time {
+    padding-right: -20%;
+  }
+  .rwd-table th:first-child,
+  .rwd-table td:first-child {
+    padding-left: 0;
+  }
+  .rwd-table th:last-child,
+  .rwd-table td:last-child {
+    padding-right: 0;
+  }
+
+}
+
+
+/* THE END OF THE IMPORTANT STUFF */
+
+/* Basic Styling */
+h1 {
+  text-align: center;
+  font-size: 2.4em;
+  color: #f2f2f2;
+}
+
+h3 {
+  display: inline-block;
+  position: relative;
+  text-align: center;
+  font-size: 1.5em;
+  color: #cecece;
+}
+
+
+
+
+/*
+    Don't look at this last part. It's unnecessary. I was just playing with pixel gradients... Don't judge.
+*/
+/*
+@media screen and (max-width: 601px) {
+  .rwd-table tr {
+    background-image: -webkit-linear-gradient(left, #428bca 137px, #f5f9fc 1px, #f5f9fc 100%);
+    background-image: -moz-linear-gradient(left, #428bca 137px, #f5f9fc 1px, #f5f9fc 100%);
+    background-image: -o-linear-gradient(left, #428bca 137px, #f5f9fc 1px, #f5f9fc 100%);
+    background-image: -ms-linear-gradient(left, #428bca 137px, #f5f9fc 1px, #f5f9fc 100%);
+    background-image: linear-gradient(left, #428bca 137px, #f5f9fc 1px, #f5f9fc 100%);
+  }
+  .rwd-table tr:nth-child(odd) {
+    background-image: -webkit-linear-gradient(left, #428bca 137px, #ebf3f9 1px, #ebf3f9 100%);
+    background-image: -moz-linear-gradient(left, #428bca 137px, #ebf3f9 1px, #ebf3f9 100%);
+    background-image: -o-linear-gradient(left, #428bca 137px, #ebf3f9 1px, #ebf3f9 100%);
+    background-image: -ms-linear-gradient(left, #428bca 137px, #ebf3f9 1px, #ebf3f9 100%);
+    background-image: linear-gradient(left, #428bca 137px, #ebf3f9 1px, #ebf3f9 100%);
+  }
+}*/
+
+.icon-delete {
+  display: none;  /* This hides the icon */
+}
+
+
+input {
+  width: 80%;
+  padding: 8px;
+  margin-bottom: 20px;
+  border: 5px solid #ccc;
+  border-radius: 4px;
+}
+
+/* 2. Wobble Animation */
+.btn-wobble {
+  background-color: #e74c3c;
+  color: white;
+}
+
+.btn-wobble:hover {
+  animation: wobble 0.8s;
+}
+
+@keyframes wobble {
+  0%,
+  100% {
+    transform: translateX(0%);
+  }
+  15% {
+    transform: translateX(-25%) rotate(-5deg);
+  }
+  30% {
+    transform: translateX(20%) rotate(3deg);
+  }
+  45% {
+    transform: translateX(-15%) rotate(-3deg);
+  }
+  60% {
+    transform: translateX(10%) rotate(2deg);
+  }
+  75% {
+    transform: translateX(-5%) rotate(-1deg);
+  }
+}
+
+/* 1. Pulse Animation */
+.btn-pulse {
+  background-color: #3498db;
+  color: white;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1em;
+  flex-wrap: wrap;
+}
+
+.page-numbers {
+  margin: 1em 1em 0;
+}
+
+.page-number {
+  padding: 0.5em;
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.active {
+  opacity: 1;
+}
+
+@media screen and (min-width: 540px) {
+  .backward {
+    order: 1;
+  }
+
+  .page-numbers {
+    order: 2;
+    margin-top: 0;
+  }
+  
+  .forward {
+    order: 3;
+  }
+}
