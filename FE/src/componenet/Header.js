@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { NavLink } from 'react-router-dom'
+import { NavLink, useNavigate } from 'react-router-dom'
 import { logout } from '../redux/auth/authSlice'
 import Button from '@mui/material/Button';
 import Menu from '@mui/material/Menu';
@@ -28,9 +28,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 export default function Header() {
   const isLogged = useSelector((state) => state.auth.isLogged)
-
    const [auth, setAuth] = useState({})
-
   const [anchorEl, setAnchorEl] = React.useState(null);
 const decodeToken = (token)=>{
     if (!token) {
@@ -42,10 +40,12 @@ const decodeToken = (token)=>{
    useEffect(()=>{
     setAuth(decodeToken(localStorage.getItem('token')))
    })
+   const navigate = useNavigate()
   const dispatch = useDispatch()
   const handleLogOut = () => {
     dispatch(logout())
     localStorage.removeItem('token')
+    navigate('')
   }
   const open = Boolean(anchorEl);
   const handleClick = (event) => {
