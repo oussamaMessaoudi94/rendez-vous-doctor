@@ -1,13 +1,14 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { NavLink } from 'react-router-dom'
-import { login, logout } from '../redux/auth/authSlice'
+import { logout } from '../redux/auth/authSlice'
 import Button from '@mui/material/Button';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import Fade from '@mui/material/Fade';
 import Avatar from '@material-ui/core/Avatar';
 import { makeStyles } from '@material-ui/core/styles';
+import { jwtDecode } from 'jwt-decode';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -27,10 +28,20 @@ const useStyles = makeStyles((theme) => ({
 }));
 export default function Header() {
   const isLogged = useSelector((state) => state.auth.isLogged)
-  const userData = useSelector((state) => state.auth.user)
+
+   const [auth, setAuth] = useState({})
 
   const [anchorEl, setAnchorEl] = React.useState(null);
-  
+const decodeToken = (token)=>{
+    if (!token) {
+        return null
+    }
+    return jwtDecode(token)
+}
+
+   useEffect(()=>{
+    setAuth(decodeToken(localStorage.getItem('token')))
+   })
   const dispatch = useDispatch()
   const handleLogOut = () => {
     dispatch(logout())
@@ -99,7 +110,7 @@ export default function Header() {
         onClose={handleClose}
         TransitionComponent={Fade}
       >
-        <MenuItem onClick={handleClose}>Hello: {userData.name}</MenuItem>
+        <MenuItem>Hello: {auth?.name}</MenuItem>
         <MenuItem onClick={handleClose}>My account</MenuItem>
         <MenuItem onClick={handleLogOut}>Logout</MenuItem>
       </Menu></li>

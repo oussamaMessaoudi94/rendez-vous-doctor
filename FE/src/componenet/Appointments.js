@@ -22,6 +22,7 @@ export default function Appointments() {
     const [appoint, setAppoint] = useState({
       name:''
     })
+    const [title, setTitle] = useState('')
     const navigate = useNavigate()
   const {
     register,
@@ -86,8 +87,12 @@ export default function Appointments() {
   useEffect(() => {
     if (params.id) {
       getProdById()
+      setTitle('Edit Rendez-vous')
+    } else {
+      appointmentTime()
+      setTitle('Prendre Rendez-vous')
     }
-    appointmentTime()
+
 
   },[params.id])
      
@@ -103,7 +108,7 @@ export default function Appointments() {
 
     <div>
       <div className="container">
-        <h2>Prendre un rendez-vous</h2>
+        <h2>{title}</h2>
         <form onSubmit={handleSubmit(onSubmit)} method="post" className="appointment-form">
           <label htmlFor="name">Nom et Prénom:</label>
           <input type="text" {...register("name")} id="name" value={appoint?.name} onChange={(event) => setAppoint(event.target.value)} />
@@ -123,7 +128,7 @@ export default function Appointments() {
             <option></option> {/* Time options will be populated here by JavaScript */}
           </select>
           <p className='text-danger'>{errors.time?.message}</p>
-          <button type="submit">Prendre Rendez-Vous</button>
+          <button type="submit">{title}</button>
         </form>
       </div>
         <ToastContainer />
